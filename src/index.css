@@ -1,0 +1,55 @@
+
+@import "tailwindcss";
+/* 👇 Add this */
+@import 'flowbite';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+}
+
+#header{
+  background: linear-gradient(-45deg, #ece9e6, #ffffff, #d3d3d3, #f0f0f0);
+  background-size: 100% 100%;
+  animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.parisienne-regular {
+  font-family: 'Parisienne', cursive;
+  font-weight: 800;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+}
+
+#logo:hover{
+  transform: scale(1.1);
+  transition: .3s ease-in-out;
+  color: red;
+}
+
+.Hide{
+  display: none;
+  transition: .3s ease-out;
+}

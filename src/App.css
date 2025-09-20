@@ -1,0 +1,81 @@
+
+
+
+#resume{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+li a{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-weight: 700;
+  text-decoration: none;
+}
+li a:hover
+{
+  text-decoration: underline;
+  color:red;
+  transition: .3s ease-in-out;
+}
+.hone h1{
+  font-size: 7rem;
+  letter-spacing: 5rem;
+}
+
+.htwo{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.htwo h1{
+
+  font-size: 7rem;
+  letter-spacing: 5rem;
+  font-weight: 800;
+  
+}
+
+.ig, .fb, .li, .gh {
+  transition: transform 0.2s ease-in-out;
+}
+
+.ig:hover, .fb:hover, .li:hover, .gh:hover {
+  transform: scale(2);
+}
+
+
+.btn_mess{
+  border: 2px solid rgb(62, 60, 60);
+  height: 3rem;border-radius: 5px;
+  
+  cursor: pointer;
+
+}
+
+.btn_mess:hover{
+  transition: .2s ease-in-out;
+  font-weight: 500;
+  background: rgb(243, 243, 241);
+}
+
+
+form input{
+  border: none;
+}

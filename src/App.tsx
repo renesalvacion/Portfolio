@@ -34,7 +34,7 @@ function App() {
   id="about"
   className="pt-16"
   style={{
-    height: "100vh",
+    height: "130vh",
     background: "linear-gradient(to bottom right, #f9f5f0, #f2e0c9, #e0c097)",
   }}
 >
@@ -43,10 +43,22 @@ function App() {
 
 
 
-    {/* */}
-    <section id='project'  className="pt-16" style={{height:'120vh', margin:'1rem'}}>
-        < Project/> 
-    </section>
+<section
+  id="project"
+  className="pt-16 relative"
+  style={{
+    height: '140vh',
+    background: 'linear-gradient(to bottom right, #f0f8ff, #e0f7fa, #ffffff)',
+    backgroundSize: '300% 300%',
+    animation: 'gradientShift 10s ease infinite',
+    overflow: 'hidden',
+  }}
+>
+  <Project />
+</section>
+
+
+
 
 <br />
 <br />

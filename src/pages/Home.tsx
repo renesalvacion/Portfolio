@@ -26,17 +26,42 @@ export default function Home() {
       <SakuraBackground count={30} />
 
       {/* Your page content on top */}
-      <div  style={{ position: "relative", zIndex: 10, display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
-        <div className="hone">
-          <h1 data-aos="fade-right">
+      <div  style={{ position: "relative", zIndex: 10, display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center'}}>
+        <div className="hone flex" style={{alignItems:'center'}}>
+          <h1 data-aos="fade-right" className="rubik-storm-regular">
             PORT <br /> FOLIO
           </h1>
+
+          <div className="imh">
+            <img className="hel" src="./message.png" alt="" />
+            <img
+            className="car"
+            src="./cat.jpg"
+            alt=""
+            style={{
+              height: '17rem',
+              borderRadius: '50%',
+              boxShadow: `
+                0 0 10px #ffe4e1,
+                0 0 20px #f8e1e7,
+                0 0 30px #fff0f5,
+                0 0 40px #ffd6dc
+              `,
+              transition: 'box-shadow 0.3s ease-in-out',
+            }}
+          />
+
+          </div>
+
+          
+
         </div>
 
-        <div className="htwo">
+        <div className="htwo" style={{display:'flex', justifyContent:'space-around', width:'100%'}}>
           <div
-            className="name flex flex-col align-middle justify-center"
+            className="name flex flex-col align-middle justify-around "
             data-aos="fade-up"
+            style={{}}
           >
             <h2 className="text-4xl font-extrabold"
             style={{
@@ -59,8 +84,29 @@ export default function Home() {
             <button className="btn_mess" onClick={() => setOpenModal(true)}>
               Get In Touch
             </button>
+
+            <div
+                className="socia flex justify-center gap-9"
+                style={{ position: "relative", top: "1rem" }}
+                data-aos="fade-up"
+              >
+                <a href="" className="ig">
+                  <InstagramIcon />
+                </a>
+                <a href="" className="fb">
+                  <FacebookIcon />
+                </a>
+                <a href="" className="li">
+                  <LinkedInIcon />
+                </a>
+                <a href="" className="gh">
+                  <GitHubIcon />
+                </a>
+            </div>
+
+
           </div>
-          <h1 data-aos="fade-left">
+          <h1 data-aos="fade-left" className="rubik-storm-regular">
             PORT <br /> FOLIO
           </h1>
 
@@ -75,24 +121,7 @@ export default function Home() {
           </Email>
         </div>
 
-        <div
-          className="socia flex justify-center gap-9"
-          style={{ position: "relative", top: "6rem" }}
-          data-aos="fade-up"
-        >
-          <a href="" className="ig">
-            <InstagramIcon />
-          </a>
-          <a href="" className="fb">
-            <FacebookIcon />
-          </a>
-          <a href="" className="li">
-            <LinkedInIcon />
-          </a>
-          <a href="" className="gh">
-            <GitHubIcon />
-          </a>
-        </div>
+        
       </div>
     </div>
   );

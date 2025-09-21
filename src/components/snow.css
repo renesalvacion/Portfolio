@@ -1,0 +1,53 @@
+/* Container to cover the screen */
+.snow-wrap {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Outer container for side-to-side sway */
+.snowflake {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  animation: sway var(--p-sway) ease-in-out infinite;
+  opacity: var(--p-opacity);
+  width: var(--p-size);
+  height: var(--p-size);
+}
+
+/* Inner flake for falling animation */
+.snowflake-inner {
+  width: 100%;
+  height: 100%;
+  animation: fall var(--p-duration) linear var(--p-delay) infinite;
+
+  background-image: url("/snowflakes.png"); /* ✅ ensure in /public */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Animations */
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(120vh);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

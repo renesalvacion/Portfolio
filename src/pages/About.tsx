@@ -53,7 +53,7 @@ export default function About() {
         {/* Education & Experience */}
         <div className="hsec flex justify-around mt-10">
           <div className="about-section grid grid-cols-2 gap-5">
-            <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <div className="max-w-sm p-6 bg-white/80 backdrop-blur-md border border-[#e8d9c3] rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
               <h1 className="text-center font-bold">EDUCATION</h1>
               <br />
               <ul>
@@ -68,7 +68,8 @@ export default function About() {
               </ul>
             </div>
 
-            <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+
+            <div className="max-w-sm p-6 bg-white/80 backdrop-blur-md border border-[#e8d9c3] rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
               <h1 className="text-center font-bold">EXPERIENCE</h1>
               <br />
               <li className="list-disc list-inside">
@@ -83,7 +84,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="skills">
+          <div className="skills max-w-sm p-6 bg-white/80 backdrop-blur-md border border-[#e8d9c3] rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
             <h1 className="text-center font-extrabold">SKILLS</h1>
             <Skills />
           </div>

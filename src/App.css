@@ -85,3 +85,40 @@ li a:hover
 form input{
   border: none;
 }
+
+.imh .hel {
+  position: absolute;
+  cursor: pointer;
+  height: 7rem;
+  right: 8rem;
+  animation: myAnimation 4s ease-in-out infinite;
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+

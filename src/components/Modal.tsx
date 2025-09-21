@@ -2,21 +2,39 @@ import React, { type ReactNode } from 'react'
 import CloseIcon from '@mui/icons-material/Close';
 
 interface ModalType {
-    modalActive: boolean
-    onClose : () => void
-    children: ReactNode
+  modalActive: boolean
+  onClose: () => void
+  children: ReactNode
 }
 
-export default function Email( {modalActive, onClose, children}:ModalType ) {
+export default function Email({ modalActive, onClose, children }: ModalType) {
+  if (!modalActive) return null
 
-    if(!modalActive) return null
   return (
-    <div className='modal fixed inset-0  bg-opacity-10 flex items-center flex-col justify-center z-50'onClick={onClose}>
-        <button onClick={onClose} style={{cursor:'pointer'}}><CloseIcon/></button>
-        <div className="modal-body">
-            {children}
-        </div>
-      
+    <div
+      className="modal fixed inset-0 bg-black bg-opacity-20 flex items-center justify-center z-50"
+      onClick={onClose}
+    >
+      <div
+        className="modal-body animate-scale-in"
+        onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+      >
+        <button
+          onClick={onClose}
+          style={{
+            position: 'absolute',
+            top: '1rem',
+            right: '1rem',
+            background: 'transparent',
+            border: 'none',
+            cursor: 'pointer',
+            color: '#5a3e60',
+          }}
+        >
+          <CloseIcon fontSize="large" />
+        </button>
+        {children}
+      </div>
     </div>
   )
 }

@@ -60,19 +60,25 @@ li a:hover
   transform: scale(2);
 }
 
-
-.btn_mess{
-  border: 2px solid rgb(62, 60, 60);
-  height: 3rem;border-radius: 5px;
-  
+.btn_mess {
+  border: 2px solid #f4a7b9;   /* sakura pink border */
+  color: #8b1c34;              /* deep rose text */
+  background: #fff0f5;         /* lavender blush */
+  height: 3rem;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  font-weight: 500;
   cursor: pointer;
-
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(244, 167, 185, 0.3); /* soft sakura glow */
 }
 
-.btn_mess:hover{
-  transition: .2s ease-in-out;
-  font-weight: 500;
-  background: rgb(243, 243, 241);
+.btn_mess:hover {
+  background: linear-gradient(135deg, #fbd3e9, #f8e1e7); /* soft sakura gradient */
+  color: #fff;                  /* switch to white text */
+  border-color: #e75480;        /* stronger sakura pink */
+  box-shadow: 0 4px 12px rgba(231, 84, 128, 0.4);
+  transform: translateY(-2px);  /* subtle lift */
 }
 
 

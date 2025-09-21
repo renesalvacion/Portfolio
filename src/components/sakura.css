@@ -1,0 +1,63 @@
+/* src/components/sakura.css */
+.sakura-wrap {
+  position: absolute;
+  inset: 0;               /* top:0; right:0; bottom:0; left:0 */
+  pointer-events: none;   /* allow clicks through petals */
+  overflow: hidden;
+  z-index: 0;             /* put behind content; increase if needed */
+}
+
+/* outer container animates horizontal sway */
+.sakura-petal {
+  position: absolute;
+  top: -12vh;
+  transform: translateX(0);
+  /* defaults, overridden by inline CSS variables */
+  --p-duration: 10s;
+  --p-delay: 0s;
+  --p-sway: 3.5s;
+  --p-size: 24px;
+  --p-opacity: 0.9;
+
+  animation: sway var(--p-sway) ease-in-out infinite alternate;
+  animation-delay: var(--p-delay);
+}
+
+/* inner element animates falling & rotation */
+.sakura-petal-inner {
+  width: var(--p-size);
+  height: var(--p-size);
+  background-image: url("/sakura.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: var(--p-opacity);
+
+  animation: fall var(--p-duration) linear infinite;
+  animation-delay: var(--p-delay);
+  will-change: transform, opacity;
+}
+
+/* vertical falling + main rotation */
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* horizontal gentle sway + tiny twist */
+@keyframes sway {
+  0% {
+    transform: translateX(-30px) rotate(-12deg);
+  }
+  100% {
+    transform: translateX(30px) rotate(12deg);
+  }
+}

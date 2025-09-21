@@ -11,6 +11,7 @@ import Project from './pages/Project'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
 
+
 import Toggle from './components/toggle'
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       < Navbar />
+      <h1>Bago</h1>
 
 
     {/* */}
@@ -28,10 +30,17 @@ function App() {
     </section>
 
 
-    {/* */}
-    <section id='about' className="pt-16 bg-amber-50" style={{height:'100vh'}}>
-        <About/>
-    </section>
+<section
+  id="about"
+  className="pt-16"
+  style={{
+    height: "100vh",
+    background: "linear-gradient(to bottom right, #f9f5f0, #f2e0c9, #e0c097)",
+  }}
+>
+  <About />
+</section>
+
 
 
     {/* */}

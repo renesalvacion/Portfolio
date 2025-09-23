@@ -4,13 +4,14 @@ import { version } from "react";
 function Skills() {
     const skills = {
         "Frontend": ["VUE JS", "REACT JS", "NEXT JS"],
-        "Backend": ["Node JS", "DJANGO", ".NET", "LARAVEL"],
+        "Backend": ["NODE JS","EXPRESS JS", "DJANGO", ".NET", "LARAVEL"],
         "Database": ["MySQL"],
         "Version Control": ["Git"]
     };
 
     return (
-        <div className="about-section grid grid-cols-2 gap-1">
+        <div className="about-section grid grid-cols-2 gap-1 p-3">
+            
             {Object.entries(skills).map(([category, skillSet]) => (
                 <div
                     key={category}
@@ -18,8 +19,8 @@ function Skills() {
 
                     
                 >
-                    <h1 className="text-xl font-semibold mb-2 text-center">{category}</h1>
-                    <ul className="list-disc list-inside">
+                    <h1 className="text-xl font-bold mb-2 text-center">{category}</h1>
+                    <ul className="list-disc list-inside font-semibold">
                         {skillSet.map((skill) => (
                             <li key={skill}>{skill}</li>
                         ))}

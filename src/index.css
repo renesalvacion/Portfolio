@@ -50,6 +50,19 @@ body{
   }
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 .modal {
   background-color: rgba(255, 240, 245, 0.4); /* very light pink + transparency */
   backdrop-filter: blur(10px);
@@ -100,4 +113,5 @@ body{
   display: none;
   transition: .3s ease-out;
 }
+
 

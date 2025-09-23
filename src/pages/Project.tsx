@@ -5,14 +5,19 @@ import SnowBackground from '../components/SnowBackground'
 
 export default function Project() {
   return (
-    <div  style={{ position: 'relative', overflow: 'hidden' /* hide overflow if needed */ }}>
-      <SnowBackground count={80}/>
-      <h1 className='text-3xl font-extrabold text-center text-gray-400 underline'>PROJECT</h1>
+    <div style={{ position: 'relative', overflow: 'hidden' }}>
+      
+      {/* ❄ Snow background with lower z-index */}
+      <SnowBackground count={100} />
 
-      <Slider />
-
-      <br />
-      < AllProject/>
+      {/* Main content with higher z-index */}
+      <div style={{ position: 'relative', zIndex: 1 }}>
+        <h1 className='text-3xl font-extrabold text-center text-gray-400 underline'>PROJECT</h1>
+        <Slider />
+        <br />
+        <AllProject />
+        <a href="https://github.com/renesalvacion?tab=repositories" target='blank' className='underline text-right '><h1 className='text-right p-3 font-bold'>See All Project</h1></a>
+      </div>
     </div>
   )
 }

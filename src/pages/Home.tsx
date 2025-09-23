@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
+
+import Aos from "../components/aos";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -13,17 +14,14 @@ import Email from "../components/Modal";
 export default function Home() {
   const [isOpen, setOpenModal] = useState(false);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  }, []);
+  Aos()
+
+  
 
   return (
-    <div style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}>
+    <div style={{ position: "relative",  overflow: "hidden" }}>
       {/* 🌸 Sakura petals in the background */}
-      <SakuraBackground count={30} />
+      <SakuraBackground count={70} />
 
       {/* Your page content on top */}
       <div  style={{ position: "relative", zIndex: 10, display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center'}}>
@@ -111,14 +109,61 @@ export default function Home() {
           </h1>
 
           <Email modalActive={isOpen} onClose={() => setOpenModal(false)}>
-            <form action="" className="flex flex-col">
-              <input type="text" placeholder="Email..." />
-              <input type="text" placeholder="Subject..." />
-              <input type="text" placeholder="Name...." />
-              <input type="text" placeholder="Message....." />
-              <button>Submit</button>
-            </form>
-          </Email>
+  <form action="" className="flex flex-col gap-6 p-4">
+    
+    {/* Email + Subject Row */}
+    <div className="flex flex-col md:flex-row gap-4">
+      {/* Email Field */}
+      <div className="flex flex-col flex-1">
+        <label htmlFor="email" className="font-medium text-sm text-gray-700 mb-1">Email</label>
+        <input
+          id="email"
+          className="bg-fuchsia-50 shadow p-2 rounded w-full"
+          type="email"
+          placeholder="Email..."
+        />
+      </div>
+
+      {/* Subject Field */}
+      <div className="flex flex-col flex-1">
+        <label htmlFor="subject" className="font-medium text-sm text-gray-700 mb-1">Subject</label>
+        <input
+          id="subject"
+          className="bg-fuchsia-50 shadow p-2 rounded w-full"
+          type="text"
+          placeholder="Subject..."
+        />
+      </div>
+    </div>
+
+    {/* Name Field */}
+    <div className="flex flex-col">
+      <label htmlFor="name" className="font-medium text-sm text-gray-700 mb-1">Name</label>
+      <input
+        id="name"
+        className="bg-fuchsia-50 shadow p-2 rounded w-full"
+        type="text"
+        placeholder="Name..."
+      />
+    </div>
+
+    {/* Message Field */}
+    <div className="flex flex-col">
+      <label htmlFor="message" className="font-medium text-sm text-gray-700 mb-1">Message</label>
+      <textarea
+        id="message"
+        className="bg-fuchsia-50 shadow p-2 rounded resize-y min-h-[12rem] w-full"
+        placeholder="Message..."
+      />
+    </div>
+
+    {/* Submit Button */}
+    <button className="bg-fuchsia-50 hover:bg-fuchsia-100 transition p-2 font-bold cursor-pointer w-full rounded">
+      Submit
+    </button>
+  </form>
+</Email>
+
         </div>
 
         

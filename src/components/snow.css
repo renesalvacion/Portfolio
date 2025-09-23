@@ -3,7 +3,7 @@
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@
   height: 100%;
   animation: fall var(--p-duration) linear var(--p-delay) infinite;
 
-  background-image: url("/snowflakes.png"); /* ✅ ensure in /public */
+  background-image: url("/snowflake.png"); /* ✅ ensure in /public */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

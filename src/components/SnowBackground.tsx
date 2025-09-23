@@ -9,7 +9,7 @@ export default function SnowBackground({ count = 50 }: Props) {
     return Array.from({ length: count }).map((_, i) => ({
       id: i,
       left: Math.random() * 100,
-      duration: 5 + Math.random() * 5,
+      duration: 5 + Math.random() * 25,
       delay: -Math.random() * 5,
       sway: 2 + Math.random() * 2,
       size: 5 + Math.random() * 10,
@@ -38,7 +38,7 @@ export default function SnowBackground({ count = 50 }: Props) {
           className="snowflake"
           style={{
             left: `${flake.left}%`,
-            top: "-10%",
+            top: "0%",
             "--p-duration": `${flake.duration}s`,
             "--p-delay": `${flake.delay}s`,
             "--p-sway": `${flake.sway}s`,

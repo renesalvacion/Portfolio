@@ -3,111 +3,186 @@ import React from "react";
 import Skills from "../components/aboutArray";
 import DryLeaves from "../components/Dryleaves";
 
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+
+import Aos from "../components/aos";
 export default function About() {
+  const ImageUrl = "../../public/me.jpg"
+  const SchoolUrl = "../../public/schold.jpg"
+
+  Aos()
+
   return (
     <div className="relative pt-16 min-h-screen overflow-hidden">
+      
       {/* Falling leaves in the background */}
       <DryLeaves />
 
+
       {/* Main content above leaves */}
       <div className="relative z-10">
-        <h1 className="text-3xl font-extrabold text-center text-gray-400 underline">
-          ABOUT ME
-        </h1>
 
-        {/* Intro Section */}
-        <div
-          className="introW flex justify-between"
-          style={{ alignItems: "center" }}
-        >
-          <div className="intro">
-            <h1 style={{ fontSize: "7rem", fontWeight: "700" }}>HELLO</h1>
-            <div
-              className="ch flex gap-0.5"
-              style={{ fontSize: "7rem", fontWeight: "700" }}
-            >
-              <h1>IM</h1>
-              <h1 className="" style={{ color: "red" }}>
-                RENE!
-              </h1>
+        
+        
+        <div className="1scol flex justify-center" style={{alignItems:'center', gap:'2rem'}}>
+
+       <div
+       data-aos="fade-up"
+  className="relative  w-full bg-center bg-cover rounded-lg shadow p-4 flex flex-col   text-center hover:shadow-lg transition"
+  style={{
+    width: '32rem',
+    height: '32rem',
+    backgroundImage: `url(${ImageUrl})`,
+    
+  }}
+>
+  {/* Transparent overlay behind text */}
+  <div className="absolute inset-0 bg-black bg-opacity-10 rounded-lg z-0" style={{opacity:'40%'}}></div>
+
+  {/* Text above overlay */}
+  <div className="relative z-10 flex flex-col w-full" data-aos="fade-up">
+    <h1 className="text-5xl font-bold text-white drop-shadow">Hello My Name</h1>
+    <h1 className="text-5xl font-bold text-red-500 drop-shadow">Is Rene!</h1>
+  </div>
+</div>
+
+
+
+            <div className="introT p-1 about_card" data-aos="fade-left" style={{ width:'42rem', height:'32rem'}}>
+              <h1 className="font-extrabold text-3xl text-center p-3">Introduction</h1>
+
+              <div className="abo p-2" style={{width:'100%', height:'12rem'}}>
+                <h1 className="font-bold" data-aos="fade-up">A Software Developer Based In Philippines</h1>
+                  <p data-aos="fade-up"> 
+                    I'm a Computer Science graduate and a passionate Full Stack
+                    Developer with a strong foundation in both front-end and back-end
+                    technologies. I enjoy building scalable, responsive web
+                    applications and solving real-world problems through clean,
+                    efficient code. With experience in modern frameworks, databases,
+                    and development tools, I strive to create seamless user
+                    experiences and robust system architectures. I'm always eager to
+                    learn, grow, and contribute to impactful projects.
+                  </p>
+              </div>
+
+
+<h1 className="font-bold text-2xl " data-aos="fade-up">Get In Touch</h1>
+              <div className="getIn flex justify-around gap-3 pt-4 " data-aos="fade-up" style={{  width:'100%', height:'12rem'}}>
+                
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <div className="email icon-card rounded-2xl flex items-center justify-center" style={{border:'2px solid black', width:'8rem', height:'8rem'}}>
+                    <span><InstagramIcon style={{fontSize:"4rem"}}/></span>
+                  </div>
+                </a>
+                
+
+                <a href="http://" target="_blank">
+                    <div className="linkind icon-card rounded-2xl flex items-center justify-center" style={{border:'2px solid black', width:'8rem', height:'8rem'}}>
+                      <span><FacebookIcon style={{fontSize:"4rem"}}/></span>
+                    </div>
+                </a>
+
+                <a href="http://" target="_blank">
+                  <div className="igsds icon-card rounded-2xl flex items-center justify-center" style={{border:'2px solid black' , width:'8rem', height:'8rem'}}>
+                    <span><LinkedInIcon style={{fontSize:"4rem"}}/></span>
+                  </div>
+                </a>
+
+                <a href="http://"  target="_blank">
+                  <div className="igsds icon-card rounded-2xl flex items-center justify-center" style={{border:'2px solid black' , width:'8rem', height:'8rem'}}>
+                    <span><GitHubIcon style={{fontSize:"4rem"}}/></span>
+                  </div>
+                </a>
+                
+
+                
+
+              </div>
             </div>
-          </div>
 
-          <div className="introp" style={{ width: "50rem" }}>
-            <p
-              className="font-semibold"
-              style={{ letterSpacing: ".1rem" }}
-            >
-              I'm a Computer Science graduate and a passionate Full Stack
-              Developer with a strong foundation in both front-end and back-end
-              technologies. I enjoy building scalable, responsive web
-              applications and solving real-world problems through clean,
-              efficient code. With experience in modern frameworks, databases,
-              and development tools, I strive to create seamless user
-              experiences and robust system architectures. I'm always eager to
-              learn, grow, and contribute to impactful projects.
-            </p>
-          </div>
-        </div>
-
-        {/* Education & Experience */}
-        <div className="hsec flex justify-around mt-10">
-          <div className="about-section grid grid-cols-2 gap-5">
-            <div className="max-w-sm p-6 bg-white/80 backdrop-blur-md border border-[#e8d9c3] rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-              <h1 className="text-center font-bold">EDUCATION</h1>
-              <br />
-              <ul>
-                <li className="list-disc list-inside">
-                  CAVITE STATE UNIVERSITY
-                  <p className="text-center">2021 - 2025</p>
-                </li>
-                <li className="list-disc list-inside">
-                  SOUTHEAST ASIA INSTITUTE OF TRADE AND TECHNOLOGY
-                  <p className="text-center">2019 - 2021</p>
-                </li>
-              </ul>
-            </div>
-
-
-            <div className="max-w-sm p-6 bg-white/80 backdrop-blur-md border border-[#e8d9c3] rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-              <h1 className="text-center font-bold">EXPERIENCE</h1>
-              <br />
-              <li className="list-disc list-inside">
-                INTERN: BACOOR NATIONAL HIGH SCHOOL
-                <p className="text-center">Programmer</p>
-              </li>
-              <li className="list-disc list-inside">
-                CLOUD STARTUP COMPANY
-                <p className="text-center">FULLSTACK DEVELOPER</p>
-                <p className="text-center">MARCH 2023 - MAY 2023</p>
-              </li>
-            </div>
-          </div>
-
-          <div className="skills max-w-sm p-6 bg-white/80 backdrop-blur-md border border-[#e8d9c3] rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-            <h1 className="text-center font-extrabold">SKILLS</h1>
-            <Skills />
-          </div>
-        </div>
-
-        <br />
-
-        {/* Hobby Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center text-center hover:shadow-lg transition">
-            <h1 className="font-bold text-center">Hobbies</h1>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center text-center hover:shadow-lg transition">
-            <h1 className="font-bold text-center">Hobbies</h1>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center text-center hover:shadow-lg transition">
-            <h1 className="font-bold text-center">Hobbies</h1>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center text-center hover:shadow-lg transition">
-            <h1 className="font-bold text-center">Hobbies</h1>
-          </div>
         </div>
       </div>
+
+      <br />
+      <br />
+
+      
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+
+          <div className="rounded-3xl h-80 p-4  shadow-lg about_card" data-aos="fade-right">
+            <h1 className="font-bold text-2xl text-center underline text-gray-800">EXPERIENCE</h1>
+
+            <div className="pt-6 space-y-6">
+              <ul className="text-center space-y-1">
+                <li className="font-bold text-xl sm:text-2xl text-gray-700">
+                  Bacoor National High School
+                </li>
+                <li className="text-xs text-gray-500 font-medium">July 2024 - September 2024</li>
+                <li className="text-sm font-semibold text-gray-600">Web Developer</li>
+              </ul>
+
+              <ul className="text-center space-y-1">
+                <li className="font-bold text-xl sm:text-2xl text-gray-700">
+                  Cloud StartUp Company
+                </li>
+                <li className="text-xs text-gray-500 font-medium">March 2023 - August 2023</li>
+                <li className="text-sm font-semibold text-gray-600">Full Stack Developer</li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <div className=" rounded-4xl about_card" style={{padding:'1rem'}} data-aos="fade-up">
+            <h1 className="font-bold text-2xl text-center">Expertise</h1>
+
+            <Skills/>
+          </div>
+
+         <div
+  className="relative rounded-4xl h-80 w-full about_card overflow-hidden"
+  data-aos="fade-left"
+  style={{
+    backgroundImage: `url(${SchoolUrl})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
+>
+  {/* Dark overlay for readability */}
+  <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
+
+  {/* Content */}
+  <div className="relative z-10 text-white flex flex-col justify-center items-center h-full px-6">
+    <h1 className="font-bold text-2xl text-center shadow-2xs">Education</h1>
+
+    <div className="pt-6 space-y-6">
+      <ul className="text-center space-y-1">
+        <li className="font-bold text-xl sm:text-2xl shadow-2xl">
+          Cavite State University
+        </li>
+        <li className="text-xs font-medium shadow-2xl">September 2021 - September 2025</li>
+        <li className="text-sm font-bold">Bachelor of Science In Computer Science</li>
+      </ul>
+
+      <ul className="text-center space-y-1">
+        <li className="font-bold text-xl sm:text-2xl shadow-2xl">
+          South East Asian Institute of Trade and Technology
+        </li>
+        <li className="text-xs font-medium">June 2019 - March 2021</li>
+        <li className="text-sm font-bold">STEM</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+      </div>
+
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import { useState,useEffect } from 'react'
 
+import SakuraFalling from './components/Particles'
+
 
 import './App.css'
 
@@ -32,12 +34,13 @@ function App() {
 
 <section
   id="about"
-  className="pt-16"
+  className="pt-10"
   style={{
-    height: "130vh",
+    height: "140vh",
     background: "linear-gradient(to bottom right, #f9f5f0, #f2e0c9, #e0c097)",
   }}
 >
+  <h1 className='text-3xl font-extrabold text-center text-gray-400 underline'>ABOUT</h1>
   <About />
 </section>
 
@@ -45,30 +48,32 @@ function App() {
 
 <section
   id="project"
-  className="pt-16 relative"
+  className=" relative p-5"
   style={{
-    height: '140vh',
+     
     background: 'linear-gradient(to bottom right, #f0f8ff, #e0f7fa, #ffffff)',
     backgroundSize: '300% 300%',
     animation: 'gradientShift 10s ease infinite',
     overflow: 'hidden',
   }}
 >
+  
   <Project />
 </section>
 
 
 
 
-<br />
-<br />
-<br />
-<br />
 
-    {/* */}
-    <section id='contact'  className="pt-16 bg-stone-50" >
-        < Contact/>
-    </section>
+
+    <section
+  id="contact"
+  className=" animated-gradient header"
+>
+  
+  <Contact />
+</section>
+
     <br />
     <br />
 

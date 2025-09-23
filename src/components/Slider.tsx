@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Navigation, Pagination } from 'swiper/modules';
 
+import Aos from './aos';
+
 
 interface SliderContent {
   image: string;
@@ -11,54 +13,45 @@ interface SliderContent {
 }
 
 export default function Slider() {
+
+  Aos()
   const sliderArray: SliderContent[] = [
     {
       image: 'https://flowbite.com/docs/images/carousel/carousel-1.svg',
-      title: 'Project One',
+      title: 'AI VOICE GENERATED IDENTIFIER',
       content: 'This is the first project in the carousel.',
+      
     },
     {
       image: 'https://flowbite.com/docs/images/carousel/carousel-2.svg',
-      title: 'Project Two',
+      title: 'FURNI-STORE ECCOMERCE',
       content: 'Another example of a great project.',
     },
     {
       image: 'https://flowbite.com/docs/images/carousel/carousel-3.svg',
-      title: 'Project Three',
+      title: 'TIC-TAC-TOE',
       content: 'Carousel working perfectly now.',
     },
     {
       image: 'https://flowbite.com/docs/images/carousel/carousel-3.svg',
-      title: 'Project Four',
+      title: 'YT LINK VIDEO CONVERTER',
       content: 'Another one in the mix.',
     },
     {
       image: 'https://flowbite.com/docs/images/carousel/carousel-3.svg',
-      title: 'Project Five',
+      title: 'INVENTORY SYSTEM',
       content: 'More projects coming.',
     },
-    {
-      image: 'https://flowbite.com/docs/images/carousel/carousel-3.svg',
-      title: 'Project Six',
-      content: 'Impressive work continues.',
-    },
-    {
-      image: 'https://flowbite.com/docs/images/carousel/carousel-3.svg',
-      title: 'Project Seven',
-      content: 'Keeping it going.',
-    },
-    {
-      image: 'https://flowbite.com/docs/images/carousel/carousel-3.svg',
-      title: 'Project Eight',
-      content: 'The final showcase.',
-    }
+    
   ];
 
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-6">Best Projects:</h1>
+      <h3 className="text-2xl text-blue-400 font-bold mb-6 text-shadow-2xs" data-aos="fade-right">Best Projects:</h3>
 
       <Swiper
+      className='cursor-pointer'
+      data-aos="fade-up"
         modules={[Navigation, Pagination]}
         navigation
         pagination={{ clickable: true }}
@@ -73,14 +66,30 @@ export default function Slider() {
       >
         {sliderArray.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center text-center h-80 m-8" >
+            <div className="bg-white rounded-lg shadow  flex flex-col items-center text-center h-90 m-8" >
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="h-24 w-auto object-contain mb-4"
+                className="w-full h-48 object-cover rounded-md mb-4"
               />
-              <h2 className="text-lg font-semibold">{slide.title}</h2>
+              <h2 className="text-lg font-bold ">{slide.title}</h2>
               <p className="text-sm text-gray-600">{slide.content}</p>
+
+              <div className="btn flex justify-around w-full pt-8">
+                <a href="http://" className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'>View Project</a>
+ <a 
+  href="http://"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+>
+  See Code
+</a>
+
+
+
+
+              </div>
             </div>
           </SwiperSlide>
         ))}

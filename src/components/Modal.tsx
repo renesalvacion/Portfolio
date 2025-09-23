@@ -12,11 +12,11 @@ export default function Email({ modalActive, onClose, children }: ModalType) {
 
   return (
     <div
-      className="modal fixed inset-0 bg-black bg-opacity-20 flex items-center justify-center z-50"
+      className="modal fixed inset-0 bg-black bg-opacity-20 flex items-center justify-center z-1-0"
       onClick={onClose}
     >
       <div
-        className="modal-body animate-scale-in"
+        className="modal-body animate-scale-in flex justify-around "
         onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
       >
         <button

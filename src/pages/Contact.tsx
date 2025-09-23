@@ -8,17 +8,22 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
+import Aos from '../components/aos';
+
 
 export default function Contact() {
+
+  Aos()
 
   const ImageUrl = "../../public/dev.jpg"
   return (
     <div>
       
       <div className="c bg-amber-50
-      flex justify-center align-middle flex-col" style={{ width:'100%', height:'30vh', }}>
+      flex justify-center align-middle flex-col" data-aos="fade-up" style={{ width:'100%', height:'30vh', }}>
         
         <h1 
+        
         className='text-3xl
         font-bold
         text-center
@@ -44,7 +49,7 @@ export default function Contact() {
 
       <div className="hC flex justify-center gap-5 pt-7 m-10">
 
-        <div className="cont">
+        <div className="cont" data-aos="zoom-in-up">
          <form action="" className="flex flex-col gap-6">
   <div className="in flex gap-2">
     <div className="flex flex-col">
@@ -70,7 +75,7 @@ export default function Contact() {
     </div>
   </div>
 
-  <div className="flex flex-col">
+  <div className="flex flex-col" >
     <label htmlFor="name" className="font-medium text-sm text-gray-700 mb-1">Name</label>
     <input
       id="name"
@@ -100,6 +105,7 @@ export default function Contact() {
 
 <div
   className="cont2 w-full bg-center bg-cover rounded-lg shadow p-4 flex flex-col items-center text-center hover:shadow-lg transition"
+  data-aos="zoom-in-up"
   style={{
     minWidth: '32rem',
     backgroundImage: `url(${ImageUrl})`,
@@ -118,19 +124,19 @@ export default function Contact() {
       zIndex: 0,
     }}
   ></div>
-  <h5 className="text-center font-bold z-10 text-white shadow text-3xl text-shadow-2xs">Our NewsLetters</h5>
+  <h5 className="text-center font-bold z-10 text-white shadow text-3xl text-shadow-2xs" data-aos="fade-up">Our NewsLetters</h5>
 
-  <p className="text-white text-center p-10 text-shadow-2xs z-10 mt-2 px-4 text-sm sm:text-base">
+  <p className="text-white text-center p-10 text-shadow-2xs z-10 mt-2 px-4 text-sm sm:text-base" data-aos="fade-up">
   Stay up to date with my latest projects, updates, and web development tips. Sign up and never miss out!
 </p>
 
-<p className="text-white text-center text-shadow-2xs z-10 mt-2 px-4 text-sm sm:text-base">
+<p className="text-white text-center text-shadow-2xs z-10 mt-2 px-4 text-sm sm:text-base" data-aos="fade-up">
   Let's stay connected! Drop your email and I’ll keep you posted on my latest dev work and passion projects.
 </p>
 
 
 <div className="con_socia z-10 pt-10">
-  <h4 className='font-bold z text-white text-shadow-2xs'>YOU CAN REACH OUT ON MY SOCIAL MEDIA ACCOUNT</h4>
+  <h4 className='font-bold z text-white text-shadow-2xs' data-aos="fade-up">YOU CAN REACH OUT ON MY SOCIAL MEDIA ACCOUNT</h4>
 
    <div
                 className="socia flex justify-center gap-9"
@@ -161,12 +167,12 @@ export default function Contact() {
       </div>
       <br />
 
-<h1 className='text-center font-semibold text-gray-500'>FOLLOW ME ON:</h1>
+<h1 className='text-center font-semibold text-gray-500' data-aos="fade-up">FOLLOW ME ON:</h1>
 <div className="flex justify-center">
   
 
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-7 ">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-7 " data-aos="fade-up">
         <div className="bg-stone-100 p-6 rounded-lg shadow-md">
           <h3 className="font-semibold text-center"> < PhoneIcon className='text-stone-800' style={{fontSize:'3rem'}}/></h3>
           <p className="text-gray-600 text-center font-bold">(+63)9859537769</p>

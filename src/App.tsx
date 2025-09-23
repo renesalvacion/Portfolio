@@ -34,9 +34,9 @@ function App() {
 
 <section
   id="about"
-  className="pt-10"
+  className=""
   style={{
-    height: "140vh",
+    
     background: "linear-gradient(to bottom right, #f9f5f0, #f2e0c9, #e0c097)",
   }}
 >

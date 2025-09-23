@@ -30,11 +30,12 @@ export default function Home() {
             PORT <br /> FOLIO
           </h1>
 
-          <div className="imh">
+          <div className="imh" data-aos="zoom-in-up">
             <img className="hel" src="./message.png" alt="" />
             <img
             className="car"
             src="./cat.jpg"
+            
             alt=""
             style={{
               height: '17rem',

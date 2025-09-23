@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Aos from './aos';
+
 interface SliderContent {
   image: string;
   title: string;
@@ -7,6 +9,7 @@ interface SliderContent {
 }
 
 export default function AllProject() {
+  Aos()
   const AllsliderArray: SliderContent[] = [
     {
       image: 'https://flowbite.com/docs/images/carousel/carousel-1.svg',
@@ -57,6 +60,7 @@ export default function AllProject() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {AllsliderArray.map((slide, idx) => (
           <div
+            data-aos="zoom-in"
             key={idx}
             className="bg-white rounded-lg shadow  flex flex-col items-center text-center hover:shadow-lg transition"
           >

@@ -104,63 +104,64 @@ export default function Contact() {
         </div>
 
 <div
-  className="cont2 w-full bg-center bg-cover rounded-lg shadow p-4 flex flex-col items-center text-center hover:shadow-lg transition"
+  className="cont2 w-full min-w-[20rem] bg-center bg-cover rounded-lg shadow-lg p-6 flex flex-col items-center text-center relative overflow-hidden"
   data-aos="zoom-in-up"
-  style={{
-    minWidth: '32rem',
-    backgroundImage: `url(${ImageUrl})`,
-    position: 'relative',
-  }}
+  style={{ backgroundImage: `url(${ImageUrl})` }}
 >
-  <div
-    className="overlay"
-    style={{
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust opacity here
-      zIndex: 0,
-    }}
-  ></div>
-  <h5 className="text-center font-bold z-10 text-white shadow text-3xl text-shadow-2xs" data-aos="fade-up">Our NewsLetters</h5>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-70 z-0" style={{opacity:'70%'}}></div>
 
-  <p className="text-white text-center p-10 text-shadow-2xs z-10 mt-2 px-4 text-sm sm:text-base" data-aos="fade-up">
-  Stay up to date with my latest projects, updates, and web development tips. Sign up and never miss out!
-</p>
+  {/* Content */}
+  <h5
+    className="text-3xl font-bold text-white drop-shadow-lg z-10"
+    data-aos="fade-up"
+  >
+    Our NewsLetters
+  </h5>
 
-<p className="text-white text-center text-shadow-2xs z-10 mt-2 px-4 text-sm sm:text-base" data-aos="fade-up">
-  Let's stay connected! Drop your email and I’ll keep you posted on my latest dev work and passion projects.
-</p>
+  <p
+    className="text-white z-10 mt-4 px-4 text-sm sm:text-base drop-shadow-md"
+    data-aos="fade-up"
+  >
+    Stay up to date with my latest projects, updates, and web development tips. Sign up and never miss out!
+  </p>
 
+  <p
+    className="text-white z-10 mt-2 px-4 text-sm sm:text-base drop-shadow-md"
+    data-aos="fade-up"
+  >
+    Let's stay connected! Drop your email and I’ll keep you posted on my latest dev work and passion projects.
+  </p>
 
-<div className="con_socia z-10 pt-10">
-  <h4 className='font-bold z text-white text-shadow-2xs' data-aos="fade-up">YOU CAN REACH OUT ON MY SOCIAL MEDIA ACCOUNT</h4>
+  {/* Social Section */}
+  <div className="z-10 pt-10">
+    <h4
+      className="font-bold text-white drop-shadow-md"
+      data-aos="fade-up"
+    >
+      YOU CAN REACH OUT ON MY SOCIAL MEDIA ACCOUNT
+    </h4>
 
-   <div
-                className="socia flex justify-center gap-9"
-                style={{ position: "relative", top: "1rem" }}
-                data-aos="fade-up"
-              >
-                <a href="" className="ig">
-                  <InstagramIcon className='text-white text-shadow-2xs' style={{fontSize:'2rem'}}/>
-                </a>
-                <a href="" className="fb">
-                  <FacebookIcon className='text-white text-shadow-2xs' style={{fontSize:'2rem'}}/>
-                </a>
-                <a href="" className="li">
-                  <LinkedInIcon className='text-white text-shadow-2xs' style={{fontSize:'2rem'}}/>
-                </a>
-                <a href="" className="gh">
-                  <GitHubIcon className='text-white text-shadow-2xs' style={{fontSize:'2rem'}}/>
-                </a>
-            </div>
-
+    <div
+      className="flex justify-center gap-9 mt-4"
+      data-aos="fade-up"
+    >
+      <a href="#" className="hover:scale-110 transition-transform duration-300">
+        <InstagramIcon className="text-white drop-shadow-md" style={{ fontSize: '2rem' }} />
+      </a>
+      <a href="#" className="hover:scale-110 transition-transform duration-300">
+        <FacebookIcon className="text-white drop-shadow-md" style={{ fontSize: '2rem' }} />
+      </a>
+      <a href="#" className="hover:scale-110 transition-transform duration-300">
+        <LinkedInIcon className="text-white drop-shadow-md" style={{ fontSize: '2rem' }} />
+      </a>
+      <a href="#" className="hover:scale-110 transition-transform duration-300">
+        <GitHubIcon className="text-white drop-shadow-md" style={{ fontSize: '2rem' }} />
+      </a>
+    </div>
+  </div>
 </div>
 
-
-</div>
 
 
 

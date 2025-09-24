@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import DownloadIcon from '@mui/icons-material/Download';
+import pdf from '../../public/Salvacion_Resume.pdf'
 
 export default function Navbar() {
   const [isHidden, setIsHidden] = useState(false);
@@ -43,12 +44,13 @@ export default function Navbar() {
           <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <button
+        <a href='../../public/Salvacion_Resume.pdf'
           id="resume"
           className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded hover:bg-gray-800 cursor-pointer"
+          download
         >
           <DownloadIcon /> Resume
-        </button>
+        </a>
       </div>
     </nav>
   );

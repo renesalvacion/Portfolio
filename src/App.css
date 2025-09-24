@@ -90,7 +90,7 @@ form input{
   position: absolute;
   cursor: pointer;
   height: 7rem;
-  right: 8rem;
+  right: -6rem;
   animation: myAnimation 4s ease-in-out infinite;
 }
 

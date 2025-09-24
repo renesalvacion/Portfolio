@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Skills from "../components/aboutArray";
 import DryLeaves from "../components/Dryleaves";
@@ -10,10 +10,20 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 import Aos from "../components/aos";
 export default function About() {
+
+  const [isActive, setActive] = useState(false)
   const ImageUrl = "../../public/me.jpg"
   const SchoolUrl = "../../public/schold.jpg"
 
   Aos()
+
+  const viewResume = () => {
+    if(!isActive){
+      setActive(true)
+    }else{
+      setActive(false)
+    }
+  }
 
   return (
     <div className="relative pt-16 min-h-screen overflow-hidden">
@@ -21,9 +31,24 @@ export default function About() {
       {/* Falling leaves in the background */}
       <DryLeaves />
 
+      {!!isActive && 
+        <div className="absolute inset-0 bg-black bg-opacity-10 rounded-lg z-1150 overflow-auto" style={{opacity:'90%'}} onClick={() => setActive(false)}>
+  <div className="w-full h-full flex justify-center items-center">
+    <img
+      src="/resume_img.jpg"  // ✅ Use public path if using Vite/React
+      alt="Resume"
+      className="object-contain max-w-full max-h-full cursor-zoom-in transition-transform duration-300 hover:scale-110"
+    />
+  </div>
+</div>
+      }
+
+
 
       {/* Main content above leaves */}
       <div className="relative z-10">
+
+        
 
         
         
@@ -39,15 +64,34 @@ export default function About() {
     
   }}
 >
+
   {/* Transparent overlay behind text */}
-  <div className="absolute inset-0 bg-black bg-opacity-10 rounded-lg z-0" style={{opacity:'40%'}}></div>
+  <div className="absolute inset-0 bg-black bg-opacity-10 rounded-lg z-0" style={{opacity:'60%'}}></div>
 
   {/* Text above overlay */}
   <div className="relative z-10 flex flex-col w-full" data-aos="fade-up">
-    <h1 className="text-5xl font-bold text-white drop-shadow">Hello My Name</h1>
-    <h1 className="text-5xl font-bold text-red-500 drop-shadow">Is Rene!</h1>
+    <h1 className="text-5xl font-bold text-white drop-shadow ">HELLO MY NAME</h1>
+    <h1 className="text-5xl font-bold text-red-500 drop-shadow" style={{letterSpacing:'1rem'}}>IS RENE!</h1>
+  </div>
+
+  <div className="btn z-10 flex justify-around items-center h-full">
+
+     <button
+    className="cursor-pointer px-6 py-2 rounded border border-white text-white backdrop-blur-sm bg-white/10 hover:bg-white/20 transition duration-300"
+  >
+    SEND ME A MESSAGE
+  </button>
+
+  <button
+    className="cursor-pointer px-6 py-2 rounded border border-white text-white backdrop-blur-sm bg-white/10 hover:bg-white/20 transition duration-300"
+  onClick={viewResume}
+  >
+    VIEW MY RESUME
+  </button>
   </div>
 </div>
+
+
 
 
 
@@ -153,7 +197,7 @@ export default function About() {
   }}
 >
   {/* Dark overlay for readability */}
-  <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
+  <div className="absolute inset-0 bg-black opacity-40 z-0" style={{opacity:"70%"}}></div>
 
   {/* Content */}
   <div className="relative z-10 text-white flex flex-col justify-center items-center h-full px-6">

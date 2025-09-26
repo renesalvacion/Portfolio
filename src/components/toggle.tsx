@@ -1,4 +1,4 @@
-import React, { Component, useState, forwardRef, useRef } from 'react'
+import React, { Component, useState, forwardRef, useRef, useImperativeHandle} from 'react'
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
@@ -28,8 +28,6 @@ export default function toggle() {
   }
 
 
-
-
   
 
   return (
@@ -41,7 +39,7 @@ export default function toggle() {
       
     </button>
 
-    <button>CLick</button>
+    
       
     </>
   )

@@ -28,21 +28,7 @@ export default function toggle() {
   }
 
 
-  //check color fg bg
- const getBg = React.forwardRef((props, ref) => {
 
-  const divRef = useRef<HTMLButtonElement>(null)
-
-  React.useImperativeHandle(ref,() => ({
-    logColor: () => {
-      if(divRef.current){
-        const bg = window.getComputedStyle(divRef.current)
-        console.log(bg);
-        
-      }
-    }
-  }))
- })
 
   
 
@@ -55,7 +41,7 @@ export default function toggle() {
       
     </button>
 
-    <button ref={divRef} {...props}>CLick</button>
+    <button>CLick</button>
       
     </>
   )

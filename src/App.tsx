@@ -23,11 +23,10 @@ function App() {
   return (
     <>
       < Navbar />
-      <h1>Bago</h1>
-
+      
 
     {/* */}
-    <section id="header"  className="pt-16" style={{  }}>
+    <section id="header"  className="pt-30" style={{ minHeight:'90vh' }}>
       <Home />
     </section>
 

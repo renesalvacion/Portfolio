@@ -26,7 +26,7 @@ export default function About() {
   }
 
   return (
-    <div className="relative pt-16 min-h-screen overflow-hidden">
+    <div className="relative pt-16  overflow-hidden">
       
       {/* Falling leaves in the background */}
       <DryLeaves />

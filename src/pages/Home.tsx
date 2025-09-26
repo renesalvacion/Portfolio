@@ -24,10 +24,10 @@ export default function Home() {
       <SakuraBackground count={70} />
 
       {/* Your page content on top */}
-      <div  style={{ position: "relative", zIndex: 10, display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center'}}>
-        <div className="hone flex" style={{alignItems:'center'}}>
-          <h1 data-aos="fade-right" className="rubik-storm-regular">
-            PORT <br /> FOLIO
+      <div className=".con"  style={{ position: "relative", zIndex: 10, display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center', gap:'2rem'}}>
+        <div className="hone flex " style={{alignItems:'center', gap:'2rem'}}>
+          <h1 data-aos="fade-right" className="rubik-storm-regular lg:text-8xl md:text-2xl sm:text-7xl">
+            PORT<br className="mobile-hide"/>FOLIO
           </h1>
 
           <div className="imh" data-aos="zoom-in-up">
@@ -62,7 +62,7 @@ export default function Home() {
             data-aos="fade-up"
             style={{}}
           >
-            <h2 className="text-4xl font-extrabold"
+            <h2 className="text-4xl md:text-2xl sm:text-2sm font-extrabold"
             style={{
               textShadow: "1px 1px 2px rgba(255, 255, 255, 0.6)", 
               letterSpacing: "1px",
@@ -105,7 +105,7 @@ export default function Home() {
 
 
           </div>
-          <h1 data-aos="fade-left" className="rubik-storm-regular secondh">
+          <h1 data-aos="fade-left" className="rubik-storm-regular secondh lg:text-8xl md:text-2xl sm:text-7xl">
             PORT <br /> FOLIO
           </h1>
 

@@ -165,3 +165,52 @@ color: #4a3f35;
   }
 }
 
+
+/* Tablet: Reduce size and spacing */
+@media (max-width: 1024px) {
+  .hone h1 {
+    font-size: 5rem;
+    letter-spacing: 3rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hone {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .htwo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .secondh{
+
+  display: none;
+  
+}
+
+  .rubik-storm-regular {
+    font-size: 2rem;
+  }
+
+  .imh img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hone h1 {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hone h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.5rem;
+  }
+}

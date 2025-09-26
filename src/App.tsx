@@ -27,7 +27,7 @@ function App() {
 
 
     {/* */}
-    <section id="header"  className="pt-16" style={{ height: '110vh' }}>
+    <section id="header"  className="pt-16" style={{  }}>
       <Home />
     </section>
 

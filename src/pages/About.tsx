@@ -51,103 +51,119 @@ export default function About() {
         
 
         
-        
-        <div className="1scol flex justify-center" style={{alignItems:'center', gap:'2rem'}}>
+ <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 p-4">
+  {/* Profile Card */}
+  <div
+    data-aos="fade-up"
+    className="relative w-full max-w-md md:max-w-lg lg:max-w-xl aspect-square bg-center bg-cover rounded-lg shadow flex flex-col text-center hover:shadow-lg transition"
+    style={{
+      backgroundImage: "url('/me.jpg')",
+    }}
+  >
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-black/60 rounded-lg"></div>
 
-       <div
-       data-aos="fade-up"
-  className="relative  w-full bg-center bg-cover rounded-lg shadow p-4 flex flex-col   text-center hover:shadow-lg transition"
-  style={{
-    width: '32rem',
-    height: '32rem',
-    backgroundImage:"url('../../public/me.jpg')",
-    
-  }}
+    {/* Text */}
+    <div className="relative z-10 flex flex-col w-full mt-6 px-4" data-aos="fade-up">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow">
+        HELLO MY NAME
+      </h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-red-500 drop-shadow tracking-widest">
+        IS RENE!
+      </h1>
+    </div>
+
+    {/* Buttons */}
+    <div className="btn relative z-10 flex flex-col sm:flex-row justify-center items-center gap-4 mt-auto mb-6 px-4">
+      <button className="cursor-pointer w-full sm:w-auto px-6 py-2 rounded border border-white text-white backdrop-blur-sm bg-white/10 hover:bg-white/20 transition">
+        SEND ME A MESSAGE
+      </button>
+
+      <button
+        className="cursor-pointer w-full sm:w-auto px-6 py-2 rounded border border-white text-white backdrop-blur-sm bg-white/10 hover:bg-white/20 transition"
+        onClick={viewResume}
+      >
+        VIEW MY RESUME
+      </button>
+    </div>
+  </div>
+
+  {/* Intro Card */}
+  <div
+    className="introT w-full max-w-3xl bg-white rounded-lg shadow p-6 md:p-8 flex flex-col"
+    data-aos="fade-left"
+  >
+    {/* Title */}
+    <h1 className="font-extrabold text-5xl sm:text-2xl md:text-5xl text-center mb-4">
+      Introduction
+    </h1>
+
+    {/* Intro text */}
+    <div className="abo space-y-3">
+      <h2 className="font-bold text-xl sm:text-base md:text-lg" data-aos="fade-up">
+        A Software Developer Based In Philippines
+      </h2>
+      <p
+        className="text-xs sm:text-sm md:text-base lg:text-1xl font-semibold leading-relaxed text-gray-700"
+        data-aos="fade-up"
+      >
+        I'm a Computer Science graduate and a passionate Full Stack Developer with
+        a strong foundation in both front-end and back-end technologies. I enjoy
+        building scalable, responsive web applications and solving real-world
+        problems through clean, efficient code. With experience in modern
+        frameworks, databases, and development tools, I strive to create seamless
+        user experiences and robust system architectures. I'm always eager to
+        learn, grow, and contribute to impactful projects.
+      </p>
+    </div>
+
+    {/* Get in touch title */}
+    <h2
+      className="font-bold text-lg sm:text-xl md:text-2xl text-center mt-8"
+      data-aos="fade-up"
+    >
+      Get In Touch
+    </h2>
+
+{/* Icons */}
+<div
+  className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-6 w-full max-w-4xl mx-auto"
+  data-aos="fade-up"
 >
+  <a href="http://" target="_blank" rel="noopener noreferrer" className="flex justify-center">
+    <div className="icon-card w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl flex items-center justify-center border-2 border-black hover:bg-gray-100 transition">
+      <InstagramIcon className="text-2xl sm:text-3xl md:text-4xl" />
+    </div>
+  </a>
 
-  {/* Transparent overlay behind text */}
-  <div className="absolute inset-0 bg-black bg-opacity-10 rounded-lg z-0" style={{opacity:'60%'}}></div>
+  <a href="http://" target="_blank" rel="noopener noreferrer" className="flex justify-center">
+    <div className="icon-card w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl flex items-center justify-center border-2 border-black hover:bg-gray-100 transition">
+      <FacebookIcon className="text-2xl sm:text-3xl md:text-4xl" />
+    </div>
+  </a>
 
-  {/* Text above overlay */}
-  <div className="relative z-10 flex flex-col w-full" data-aos="fade-up">
-    <h1 className="text-5xl font-bold text-white drop-shadow ">HELLO MY NAME</h1>
-    <h1 className="text-5xl font-bold text-red-500 drop-shadow" style={{letterSpacing:'1rem'}}>IS RENE!</h1>
-  </div>
+  <a href="http://" target="_blank" rel="noopener noreferrer" className="flex justify-center">
+    <div className="icon-card w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl flex items-center justify-center border-2 border-black hover:bg-gray-100 transition">
+      <LinkedInIcon className="text-2xl sm:text-3xl md:text-4xl" />
+    </div>
+  </a>
 
-  <div className="btn z-10 flex justify-around items-center h-full">
-
-     <button
-    className="cursor-pointer px-6 py-2 rounded border border-white text-white backdrop-blur-sm bg-white/10 hover:bg-white/20 transition duration-300"
-  >
-    SEND ME A MESSAGE
-  </button>
-
-  <button
-    className="cursor-pointer px-6 py-2 rounded border border-white text-white backdrop-blur-sm bg-white/10 hover:bg-white/20 transition duration-300"
-  onClick={viewResume}
-  >
-    VIEW MY RESUME
-  </button>
-  </div>
+  <a href="http://" target="_blank" rel="noopener noreferrer" className="flex justify-center">
+    <div className="icon-card w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl flex items-center justify-center border-2 border-black hover:bg-gray-100 transition">
+      <GitHubIcon className="text-2xl sm:text-3xl md:text-4xl" />
+    </div>
+  </a>
 </div>
 
 
 
 
-
-            <div className="introT p-1 about_card" data-aos="fade-left" style={{ width:'42rem', height:'32rem'}}>
-              <h1 className="font-extrabold text-3xl text-center p-3">Introduction</h1>
-
-              <div className="abo p-2" style={{width:'100%', height:'12rem'}}>
-                <h1 className="font-bold" data-aos="fade-up">A Software Developer Based In Philippines</h1>
-                  <p data-aos="fade-up"> 
-                    I'm a Computer Science graduate and a passionate Full Stack
-                    Developer with a strong foundation in both front-end and back-end
-                    technologies. I enjoy building scalable, responsive web
-                    applications and solving real-world problems through clean,
-                    efficient code. With experience in modern frameworks, databases,
-                    and development tools, I strive to create seamless user
-                    experiences and robust system architectures. I'm always eager to
-                    learn, grow, and contribute to impactful projects.
-                  </p>
-              </div>
+  </div>
+</div>
 
 
-<h1 className="font-bold text-2xl " data-aos="fade-up">Get In Touch</h1>
-              <div className="getIn flex justify-around gap-3 pt-4 " data-aos="fade-up" style={{  width:'100%', height:'12rem'}}>
-                
-                <a href="http://" target="_blank" rel="noopener noreferrer">
-                  <div className="email icon-card rounded-2xl flex items-center justify-center" style={{border:'2px solid black', width:'8rem', height:'8rem'}}>
-                    <span><InstagramIcon style={{fontSize:"4rem"}}/></span>
-                  </div>
-                </a>
-                
-
-                <a href="http://" target="_blank">
-                    <div className="linkind icon-card rounded-2xl flex items-center justify-center" style={{border:'2px solid black', width:'8rem', height:'8rem'}}>
-                      <span><FacebookIcon style={{fontSize:"4rem"}}/></span>
-                    </div>
-                </a>
-
-                <a href="http://" target="_blank">
-                  <div className="igsds icon-card rounded-2xl flex items-center justify-center" style={{border:'2px solid black' , width:'8rem', height:'8rem'}}>
-                    <span><LinkedInIcon style={{fontSize:"4rem"}}/></span>
-                  </div>
-                </a>
-
-                <a href="http://"  target="_blank">
-                  <div className="igsds icon-card rounded-2xl flex items-center justify-center" style={{border:'2px solid black' , width:'8rem', height:'8rem'}}>
-                    <span><GitHubIcon style={{fontSize:"4rem"}}/></span>
-                  </div>
-                </a>
-                
-
-                
-
-              </div>
-            </div>
-
-        </div>
+      
+      
       </div>
 
       <br />

@@ -19,7 +19,7 @@ export default function Home() {
   
 
   return (
-    <div style={{ position: "relative",  overflow: "hidden" }}>
+    <div style={{ position: "relative"}}>
       {/* 🌸 Sakura petals in the background */}
       <SakuraBackground count={70} />
 
@@ -105,7 +105,7 @@ export default function Home() {
 
 
           </div>
-          <h1 data-aos="fade-left" className="rubik-storm-regular">
+          <h1 data-aos="fade-left" className="rubik-storm-regular secondh">
             PORT <br /> FOLIO
           </h1>
 

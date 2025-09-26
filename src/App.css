@@ -28,12 +28,7 @@ li a{
   font-weight: 700;
   text-decoration: none;
 }
-li a:hover
-{
-  text-decoration: underline;
-  color:red;
-  transition: .3s ease-in-out;
-}
+
 .hone h1{
   font-size: 7rem;
   letter-spacing: 5rem;

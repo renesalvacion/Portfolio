@@ -106,7 +106,7 @@ export default function Contact() {
 <div
   className="cont2 w-full min-w-[20rem] bg-center bg-cover rounded-lg shadow-lg p-6 flex flex-col items-center text-center relative overflow-hidden"
   data-aos="zoom-in-up"
-  style={{ backgroundImage: `url(${ImageUrl})` }}
+  style={{ backgroundImage: "url('../../public/dev.jpg')" }}
 >
   {/* Overlay */}
   <div className="absolute inset-0 bg-black bg-opacity-70 z-0" style={{opacity:'70%'}}></div>

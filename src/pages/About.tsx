@@ -60,7 +60,7 @@ export default function About() {
   style={{
     width: '32rem',
     height: '32rem',
-    backgroundImage: `url(${ImageUrl})`,
+    backgroundImage:"url('../../public/me.jpg')",
     
   }}
 >
@@ -191,7 +191,7 @@ export default function About() {
   className="relative rounded-4xl h-80 w-full about_card overflow-hidden"
   data-aos="fade-left"
   style={{
-    backgroundImage: `url(${SchoolUrl})`,
+    backgroundImage: "url('../../public/schold.jpg')",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   }}

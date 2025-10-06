@@ -217,7 +217,7 @@ export default function About() {
 
   {/* Content */}
   <div className="relative z-10 text-white flex flex-col justify-center items-center h-full px-6">
-    <h1 className="font-bold text-2xl text-center shadow-2xs underline">EDUCATION</h1>
+    <h1 className="font-bold text-2xl text-center shadow-2xs underline  ">EDUCATION</h1>
 
     <div className="pt-6 space-y-6">
       <ul className="text-center space-y-1">

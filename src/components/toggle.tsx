@@ -18,19 +18,16 @@ export default function toggle({onThemeChange} : ToggleProps) {
     const newState = !bgActive
     onThemeChange(newState)
     if(!bgActive){
-       document.body.style.backgroundColor = ("black")
-      document.body.style.color = ("white")
-      document.body.style.transition = (".3s ease-in")
+      
 
     
 
     setBgActive(true)
     
     }else{
-      document.body.style.backgroundColor = ("white")
+      
       setBgActive(false)
-       document.body.style.color = ("")
-       document.body.style.transition = (".3s ease-in")
+       
     }
 
     

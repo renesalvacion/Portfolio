@@ -10,15 +10,20 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Sprinkle from '../components/Sprinkle';
 import Aos from '../components/aos';
 
-export default function Contact() {
+export default function Contact({isDark} : {isDark:boolean}) {
   Aos();
 
   return (
-    <div className="relative bg-gradient-to-br from-rose-100 via-blue-50 to-violet-100 p-10">
+    <div className="relative  p-10" style={{
+    background: isDark
+      ? "linear-gradient(to bottom right, #111, #333, #000)"
+      : "linear-gradient(to bottom right, #ffe4e6, #eff6ff, #f3e8ff)",
+  }}>
       {/* Sprinkle background */}
-      <div className="absolute inset-0 -z-10">
-        <Sprinkle />
-      </div>
+       {/* Sprinkle animation behind everything */}
+  <div className="absolute inset-0 z-0 pointer-events-none">
+    <Sprinkle />
+  </div>
 
       {/* Header */}
       <div

@@ -15,6 +15,7 @@ import Footer from './components/Footer'
 
 
 import Toggle from './components/toggle'
+import Sprinkle from './components/Sprinkle'
 function App() {
   const [isDark, setIsDark] = useState(false)
 
@@ -79,13 +80,19 @@ function App() {
 
 
 
-    <section
+<section
   id="contact"
-  className=" animated-gradient header"
->
+  className="relative overflow-hidden"
   
-  <Contact />
+>
+ 
+
+
+    <Contact isDark={isDark}/>
+ 
 </section>
+
+
 
     <br />
     <br />

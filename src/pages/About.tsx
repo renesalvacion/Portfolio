@@ -182,7 +182,7 @@ export default function About() {
                   Bacoor National High School
                 </li>
                 <li className="text-xs text-gray-500 font-medium">July 2024 - September 2024</li>
-                <li className="text-sm font-semibold text-gray-600">Web Developer</li>
+                <li className="text-sm font-semibold text-gray-600">INTERN: Web Developer</li>
               </ul>
 
               <ul className="text-center space-y-1">
@@ -198,7 +198,7 @@ export default function About() {
 
 
           <div className=" rounded-4xl about_card" style={{padding:'1rem'}} data-aos="fade-up">
-            <h1 className="font-bold text-2xl text-center">Expertise</h1>
+            <h1 className="font-bold text-2xl text-center underline">EXPERTISE</h1>
 
             <Skills/>
           </div>
@@ -217,7 +217,7 @@ export default function About() {
 
   {/* Content */}
   <div className="relative z-10 text-white flex flex-col justify-center items-center h-full px-6">
-    <h1 className="font-bold text-2xl text-center shadow-2xs">Education</h1>
+    <h1 className="font-bold text-2xl text-center shadow-2xs underline">EDUCATION</h1>
 
     <div className="pt-6 space-y-6">
       <ul className="text-center space-y-1">

@@ -1,40 +1,33 @@
-import React, { type ReactNode } from 'react'
-import CloseIcon from '@mui/icons-material/Close';
+import React, { type ReactNode } from "react";
+import { Close } from "@mui/icons-material";
 
-interface ModalType {
-  modalActive: boolean
-  onClose: () => void
-  children: ReactNode
+
+interface ModalProps {
+  modalActive: boolean;
+  onClose: () => void;
+  children: ReactNode;
 }
 
-export default function Email({ modalActive, onClose, children }: ModalType) {
-  if (!modalActive) return null
+export default function Email({ modalActive, onClose, children }: ModalProps) {
+  if (!modalActive) return null;
 
   return (
     <div
-      className="modal fixed inset-0 bg-black bg-opacity-20 flex items-center justify-center z-1-0"
       onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-3"
     >
       <div
-        className="modal-body animate-scale-in flex justify-around "
-        onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+        onClick={(e) => e.stopPropagation()}
+        className="modal-body relative bg-white rounded-xl shadow-lg"
       >
         <button
           onClick={onClose}
-          style={{
-            position: 'absolute',
-            top: '1rem',
-            right: '1rem',
-            background: 'transparent',
-            border: 'none',
-            cursor: 'pointer',
-            color: '#5a3e60',
-          }}
+          className="absolute top-3 right-3 text-gray-600 hover:text-fuchsia-700"
         >
-          <CloseIcon fontSize="large" />
+          <Close fontSize="medium" />
         </button>
         {children}
       </div>
     </div>
-  )
+  );
 }

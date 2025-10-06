@@ -26,7 +26,7 @@ export default function Home() {
       {/* Your page content on top */}
       <div className=".con"  style={{ position: "relative", zIndex: 10, display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center', gap:'2rem'}}>
         <div className="hone flex " style={{alignItems:'center', gap:'2rem'}}>
-          <h1 data-aos="fade-right" className="rubik-storm-regular lg:text-8xl md:text-2xl sm:text-7xl">
+          <h1 data-aos="fade-right" className=" mb rubik-storm-regular lg:text-8xl md:text-2xl sm:text-7xl">
             PORT<br className="mobile-hide"/>FOLIO
           </h1>
 
@@ -37,17 +37,7 @@ export default function Home() {
             src="./cat.jpg"
             
             alt=""
-            style={{
-              height: '17rem',
-              borderRadius: '50%',
-              boxShadow: `
-                0 0 10px #ffe4e1,
-                0 0 20px #f8e1e7,
-                0 0 30px #fff0f5,
-                0 0 40px #ffd6dc
-              `,
-              transition: 'box-shadow 0.3s ease-in-out',
-            }}
+            
           />
 
           </div>
@@ -62,11 +52,16 @@ export default function Home() {
             data-aos="fade-up"
             style={{}}
           >
-            <h2 className="text-4xl md:text-2xl sm:text-2sm font-extrabold"
+            <h2
+            className="font-extrabold text-2xl sm:text-3xl md:text-4xl text-center"
             style={{
-              textShadow: "1px 1px 2px rgba(255, 255, 255, 0.6)", 
+              textShadow: "1px 1px 2px rgba(255, 255, 255, 0.6)",
               letterSpacing: "1px",
-            }}>RENE O. SALVACION JR.</h2>
+            }}
+          >
+            RENE O. SALVACION JR.
+          </h2>
+
             
             <h5  style={{
                 textAlign: "center",
@@ -110,7 +105,11 @@ export default function Home() {
           </h1>
 
           <Email modalActive={isOpen} onClose={() => setOpenModal(false)}>
-  <form action="" className="flex flex-col gap-6 p-4">
+  <form
+  action=""
+  className="flex flex-col gap-3 sm:gap-6 p-3 sm:p-4"
+>
+
     
     {/* Email + Subject Row */}
     <div className="flex flex-col md:flex-row gap-4">

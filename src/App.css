@@ -1,4 +1,6 @@
-
+.ham{
+  display: none;
+}
 
 
 #resume{
@@ -13,6 +15,18 @@
   align-items: center;
   
 }
+
+.car {
+  height: 17rem;
+  border-radius: 50% ;
+  box-shadow:
+    0 0 10px #ffe4e1,
+    0 0 20px #f8e1e7,
+    0 0 30px #fff0f5,
+    0 0 40px #ffd6dc;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
 
 nav ul{
   list-style: none;
@@ -170,6 +184,9 @@ color: #4a3f35;
 }
 
 
+
+
+
 /* Tablet: Reduce size and spacing */
 @media (max-width: 1024px) {
   .hone h1 {
@@ -221,10 +238,28 @@ color: #4a3f35;
    .mobile-hide {
     display: none;
   }
+
+  .ham{
+  display: flex;
 }
 
-/* Extra small devices */
-@media (max-width: 480px) {
+.nav_anim{
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    background: white;
+    opacity: 80%;
+    width: 100%;
+    
+  }
+  .nav_anim ul{
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
   .hone h1 {
     font-size: 2.2rem;
     letter-spacing: 0.5rem;
@@ -234,7 +269,95 @@ color: #4a3f35;
     display: none;
   }
 
-  .con{
-    margin: 111rem;
+  
+
+  #header{
+    height: 120vh;
+  }
+
+  .car{
+    border-radius: 3rem !important;
+    width: 21rem !important;
+  }
+
+
+
+  .nav_anim{
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    background: white;
+    opacity: 80%;
+    width: 100%;
+    
+  }
+  .nav_anim ul{
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
   }
 }
+
+
+@media (max-width: 400px) {
+
+
+
+  .mb{
+    font-size: 11rem;
+  }
+  .hone h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .btn_mess {
+    margin: 1rem;
+  }
+
+  #header{
+    height: 120vh;
+    
+  }
+
+  .con{
+    padding-top: 1110rem !important;
+  }
+
+  .car{
+    border-radius: 1rem !important;
+  }
+}
+
+
+
+/* Mobile first */
+/* Mobile first */
+.modal-body {
+  width: 90%;
+  max-height: 80vh;  /* keeps it inside screen */
+  padding: 1rem;
+  overflow: hidden;   /* no scrollbars */
+}
+
+/* Tablet (≥640px) */
+@media (min-width: 640px) {
+  .modal-body {
+    width: 80%;
+    padding: 1.25rem;
+  }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  .modal-body {
+    width: 60%;
+    padding: 1.5rem;
+  }
+}
+
+

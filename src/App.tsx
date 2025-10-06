@@ -16,27 +16,39 @@ import Footer from './components/Footer'
 
 import Toggle from './components/toggle'
 function App() {
-  const [count, setCount] = useState(0)
+  const [isDark, setIsDark] = useState(false)
 
+  const handleThemeChange = (active:boolean) => {
+    setIsDark(active)
+  }
     
 
   return (
     <>
-      < Navbar />
+      < Navbar isDark={isDark}/>
       
 
     {/* */}
-    <section id="header"  className="pt-30" style={{ minHeight:'90vh' }}>
+    <section id="header"  className="pt-30  h-screen" style={{
+        background: isDark
+          ? "linear-gradient(to bottom right, #111, #333, #000)"
+          : "linear-gradient(-45deg, #fff0f5, #ffe4e1, #ffffff, #f8e1e7)",
+        backgroundSize: isDark ? "100% 100%" : "300% 300%",
+        animation: isDark ? "none" : "gradientMove 8s ease infinite",
+        color: isDark ? "#f5f5f5" : "#5a3e60",
+      }}>
       <Home />
     </section>
 
 
 <section
   id="about"
-  className=""
+  className="min-h-[calc(100vh-4rem)]"
   style={{
     
-    background: "linear-gradient(to bottom right, #f9f5f0, #f2e0c9, #e0c097)",
+    background: isDark
+    ? "linear-gradient(to bottom right, #111, #333, #000)"
+    :"linear-gradient(to bottom right, #f9f5f0, #f2e0c9, #e0c097)",
   }}
 >
   <h1 className='text-3xl font-extrabold text-center text-gray-400 underline'>ABOUT</h1>
@@ -50,7 +62,9 @@ function App() {
   className=" relative p-5"
   style={{
      
-    background: 'linear-gradient(to bottom right, #f0f8ff, #e0f7fa, #ffffff)',
+    background: isDark 
+    ? "linear-gradient(to bottom right, #111, #333, #000)"
+    :'linear-gradient(to bottom right, #f0f8ff, #e0f7fa, #ffffff)',
     backgroundSize: '300% 300%',
     animation: 'gradientShift 10s ease infinite',
     overflow: 'hidden',
@@ -76,11 +90,11 @@ function App() {
     <br />
     <br />
 
-    <Footer/>
+    <Footer isDark={isDark}/>
 
 
     
-    < Toggle/>
+    < Toggle onThemeChange={handleThemeChange}/>
     </>
   )
 }

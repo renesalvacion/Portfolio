@@ -8,7 +8,10 @@ export default function Project() {
     <div style={{ position: 'relative', overflow: 'hidden' }}>
       
       {/* ❄ Snow background with lower z-index */}
-      <SnowBackground count={100} />
+      <div className="absolute inset-0 -z-10">
+        <SnowBackground count={100} />
+      </div>
+      
 
       {/* Main content with higher z-index */}
       <div style={{ position: 'relative', zIndex: 1 }}>

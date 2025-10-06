@@ -24,16 +24,7 @@ body{
 }
 
 #header {
-  background: linear-gradient(
-    -45deg,
-    #fff0f5,   /* lavender blush (soft pink) */
-    #ffe4e1,   /* misty rose */
-    #ffffff,   /* pure white */
-    #f8e1e7    /* pale pink */
-  );
-  background-size: 300% 300%;
-  animation: gradientMove 8s ease infinite;
-  color: #5a3e60;
+ 
   
   
 

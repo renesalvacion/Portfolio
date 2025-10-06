@@ -2,14 +2,21 @@ import React, { Component, useState, forwardRef, useRef, useImperativeHandle} fr
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-export default function toggle() {
+type ToggleProps = {
+  onThemeChange: (active: boolean) => void
+}
+export default function toggle({onThemeChange} : ToggleProps) {
 
   const [bg, setCountBg] = useState("")
   const [bgActive, setBgActive] = useState(false)
 
+
+
   const divRef = useRef(null)
 
   const toggleBG = () => {
+    const newState = !bgActive
+    onThemeChange(newState)
     if(!bgActive){
        document.body.style.backgroundColor = ("black")
       document.body.style.color = ("white")
@@ -18,12 +25,15 @@ export default function toggle() {
     
 
     setBgActive(true)
+    
     }else{
       document.body.style.backgroundColor = ("white")
       setBgActive(false)
        document.body.style.color = ("")
        document.body.style.transition = (".3s ease-in")
     }
+
+    
     
   }
 

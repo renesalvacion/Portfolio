@@ -132,7 +132,7 @@ export default function Contact() {
 
       {/* Contact Info Grid */}
       <div className="pt-14">
-        <h1 className="text-center font-semibold text-purple-600 text-lg" data-aos="fade-up">FOLLOW ME ON:</h1>
+        <h1 className="text-center  text-purple-600 text-lg font-bold" data-aos="fade-up">GET MY INFO:</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-7 max-w-5xl mx-auto" data-aos="fade-up">
           <div className="bg-white/70 backdrop-blur-md p-6 rounded-lg shadow-md text-center">
             <PhoneIcon className="text-purple-800 mb-2" style={{ fontSize: '2.5rem' }} />

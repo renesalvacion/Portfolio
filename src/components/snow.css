@@ -5,6 +5,7 @@
   pointer-events: none;
   z-index: -1;
   overflow: hidden;
+  height: 100%;
 }
 
 /* Outer container for side-to-side sway */
